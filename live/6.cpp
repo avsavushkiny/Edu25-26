@@ -6,25 +6,30 @@ int main()
     for (;;)
     {
         char a{};
-        cout << "выберите символ" << endl;
+        int b{};
+        int c{};
+        cout << "выберите символ и 2 числа" << endl;
 
         cin >> a;
+        cin >> b;
+        cin >> c;
         switch (a)
         {
         case '+':
-            cout << "сложение" << endl;
+            cout << b+c << endl;
+
             break;
         case '-':
-            cout << "вычетание" << endl;
+            cout << b-c << endl;
             break;
         case '*':
-            cout << "умножение" << endl;
+            cout << b*c << endl;
             break;
         case '/':
-            cout << "деление" << endl;
+            cout << b/c << endl;
             break;
         default:
-            cout << "не то" << endl;
+            cout << "не то" << endl
         }
     }
 }
