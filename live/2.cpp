@@ -1,38 +1,28 @@
 #include <iostream>
+#include <cstring>
 using namespace std;
+
+int ROT{};
 
 int main()
 {
-    for (;;)
+    while (true)
     {
-        cout << "выберите первое число" << endl;
-        int c{};
-        cin >> b;
-        cout << "выберите второе число" << endl;
-        int b{};
-        cin >> c;
-        cout << "выберите математическое действие" << endl;
-        char a{};
+        cout << "Enter secret word" << endl;
+        char a[10] = "";
         cin >> a;
+        if (a == "stop") break;
 
-        switch (a)
+        cout << "Enter ROT" << endl;
+        cin >> ROT;
+        if (ROT == 0) break;
+
+        for (int i = 0; i < strlen(a); i++)
         {
-        case '+':
-            cout << b+c << endl;
-            break;
-        case '-':
-            cout << b-c << endl;
-            break;
-        case '*':
-            cout << b*c << endl;
-            break;
-        case '/':
-            cout << b/c << endl;
-            break;
-        default:
-            cout << "вы выбрали не математическое действие" << endl;
-            break;
+            cout << char(a[i] - ROT);
         }
-        
+        cout << endl;
     }
+    
+    return 0;
 }

@@ -1,19 +1,25 @@
 #include <iostream>
-#include <vector>
 using namespace std;
+
+char a[] = "hello";
 
 int main()
 {
-    char arr[10] = {65, 65, 65, 61, 63};
-
-    cout << sizeof(arr) << endl;
-    cout << sizeof(arr)/sizeof(arr[0]) << endl;
-
-    cout << "arr" << endl;
-
-    for (int i = 0; i < 10; i++)
+    for (int i = 0; i < 6; i++)
     {
-        cout << arr[i] << endl;
+        cout << (int)a[i] << endl;
+    }
+
+    int ROT1 = 1;
+
+    for (int i = 0; i < 6; i++)
+    {
+        cout << (int)a[i] + ROT1 << endl;
+    }
+
+    for (int i = 0; i < 6; i++)
+    {
+        cout << char(a[i] + ROT1) << endl;
     }
 
     return 0;
