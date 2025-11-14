@@ -2,29 +2,15 @@
 #include <cstring>
 using namespace std;
 
-int ROT{};
-
 int main()
 {
-    while (true)
-    {
-        cout << "Enter ROT: ";
-        cin >> ROT;
+    string a; string b;
+    cout << "Введите имя" << endl;
+    cin >> a;
+    cout << "Введите фамилию" << endl;
+    cin >> b;
 
-        if (ROT == 0) break;
+    string c = string(a) + " " + string(b);
+    cout << c << endl;
 
-        cout << "Enter the word" << endl;
-        char a[10] = "";
-        cin >> a;
-
-        if (a == "stop") break;
-
-        for (int i = 0; i < strlen(a); i++)
-        {
-            cout << char(a[i] + ROT);
-        }
-        cout << endl;
-    }
-
-    return 0;
 }

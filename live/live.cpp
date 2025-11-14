@@ -1,26 +1,25 @@
+#include <string>
+#include <cstring>
 #include <iostream>
 using namespace std;
 
-char a[] = "hello";
-
 int main()
 {
-    for (int i = 0; i < 6; i++)
-    {
-        cout << (int)a[i] << endl;
-    }
+        string s = "Hello";
+        char c1 = s[0];
+        char c2 = s.at(1);
+        char first = s.front();
+        char last = s.back();
 
-    int ROT1 = 1;
+        s.append(" World");
+        s.insert(5, " beautiful");
+        s.replace(6, 9, "wonderful");
+        s.erase(5,11);
+        s.push_back('!');
+        s.pop_back();
+        s.clear();
 
-    for (int i = 0; i < 6; i++)
-    {
-        cout << (int)a[i] + ROT1 << endl;
-    }
-
-    for (int i = 0; i < 6; i++)
-    {
-        cout << char(a[i] + ROT1) << endl;
-    }
+        cout << s << endl;
 
     return 0;
-}
+    }
