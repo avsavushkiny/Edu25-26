@@ -1,25 +1,24 @@
-#include <string>
-#include <cstring>
 #include <iostream>
+#include <fstream>
 using namespace std;
 
 int main()
 {
-        string s = "Hello";
-        char c1 = s[0];
-        char c2 = s.at(1);
-        char first = s.front();
-        char last = s.back();
+    int number = 42; // data
 
-        s.append(" World");
-        s.insert(5, " beautiful");
-        s.replace(6, 9, "wonderful");
-        s.erase(5,11);
-        s.push_back('!');
-        s.pop_back();
-        s.clear();
+    ofstream outFile("data.bin", ios::binary);
+    if (outFile.is_open())
+    {
+        outFile.write(reinterpret_cast<char *>(&number), sizeof(number));
+        outFile.close();
+    }
 
-        cout << s << endl;
+    ofstream outFile2("data.txt");
+    if (outFile2.is_open())
+    {
+        outFile2 << number;
+        outFile2.close();
+    }
 
     return 0;
-    }
+}

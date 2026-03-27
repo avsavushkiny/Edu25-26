@@ -1,18 +1,15 @@
-#include<iostream>
-#include<cstring>
+#include <iostream>
+#include <set>
+#include <vector>
 using namespace std;
-
 
 int main()
 {
-   string name, family;
-   cout << "Enter name and family: " << endl;
-   cin >> name;
-   cin >> family; 
-   string fullname = string(name) + " " + string(family);
-   
-   cout << fullname << endl;
-   return 0;
-}
+    
+    vector<int> number_v = {2, 5, 87, 3, 2, 0};
+    set<int> number = {2, 5, 87, 3, 4, 0};
 
+    number_v.erase(2);
+    return 0;
+}
 
